@@ -6,10 +6,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class AnimalsCage {
-
     @Autowired
     private Timer time;
-
 
     @Autowired
     @Qualifier("dog")
@@ -23,4 +21,9 @@ public class AnimalsCage {
         System.out.println(time.getTime());
         System.out.println("________________________");
     }
+
+    public Timer getTimer() {
+        return time;
+    }
+
 }
